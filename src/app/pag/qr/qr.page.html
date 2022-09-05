@@ -1,0 +1,34 @@
+<ion-header>
+  
+  
+  
+  <ion-toolbar>
+
+
+    <ion-buttons slot="start" id="mn">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="icon-only" name="menu-outline" ></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    
+ <ion-item>
+ 
+  <ion-icon name='qr-code-outline'></ion-icon>
+
+  <ion-title>QR</ion-title>
+ </ion-item>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+ <ion-card>
+  <ion-card-title>Generador de código QR</ion-card-title>
+  <br>
+  <ion-card-subtitle>Haz click en el botón "QR" para crear el QR de registro de asistencia para tus alumnos.</ion-card-subtitle>
+ </ion-card>
+ <ion-button id="boton1" routerLink="/generador" expand="block" fill="clear" shape="round">
+  QR
+ </ion-button>
+
+</ion-content>

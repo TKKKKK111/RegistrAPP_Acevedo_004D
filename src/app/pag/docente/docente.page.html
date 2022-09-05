@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar>
+   
+      <ion-back-button defaultHref="/login"
+      mode="ios"
+      slot="start"
+      id="mn"></ion-back-button>
+   
+    <ion-title id="t1" slot="end"> Recuperar Contraseña </ion-title>
+  </ion-toolbar>
+</ion-header>
+ 
+<ion-content>
+  <ion-card>
+      <ion-card-title></ion-card-title>
+    <form #formulario="ngForm" (ngSubmit)="onSubmit()">
+      <ion-item>
+        <ion-label></ion-label>
+        <ion-input id="p" type="id" placeholder="Ingresa tu usuario" name="password2" 
+        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+      
+        ></ion-input>
+  
+      </ion-item>
+
+    <ion-item>
+      <ion-label></ion-label>
+      <ion-input id="p" type="password" placeholder="Ingresa nueva contraseña" name="password2" 
+      pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+    
+      ></ion-input>
+
+    </ion-item>
+    
+      
+    <ion-item>
+      
+      <ion-input id="p" type="r-password" placeholder="Vuelve a ingresar la contraseña" name="password" required
+      pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"></ion-input>
+    </ion-item>
+
+
+    <ion-button (disable)="formulario.invalid" type="submit" id="boton2" expand="full" fill="outline" shape="round" routerLink="/inicio">
+        Enviar
+    </ion-button>
+  </form>
+</ion-card>
+</ion-content>

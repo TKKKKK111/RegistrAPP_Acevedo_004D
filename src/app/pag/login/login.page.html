@@ -1,0 +1,56 @@
+<ion-header>
+  
+  
+  
+  <ion-toolbar>
+
+
+    <ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="icon-only" name="menu-outline" id="mn"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    
+ 
+    
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+<ion-card id="card1">
+  
+  <ion-card-content >
+    <ion-card-title id=""><b>Ingresa tus credenciales</b></ion-card-title>
+
+    <br>
+
+  
+ 
+  <form #formulario="ngForm" (ngSubmit)="onSubmit()">
+
+
+    <ion-item>
+      <ion-label></ion-label>
+      <ion-input id="p" type="text" placeholder="Ingresa usuario" name="id" [(ngModel)]="usuario.id" required
+    
+      ></ion-input>
+
+    </ion-item>
+    <br>
+      
+    <ion-item>
+      
+      <ion-input id="p" type="password" placeholder="Ingresa contraseña" name="password" [(ngModel)]="usuario.password" required
+      pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"></ion-input>
+    </ion-item>
+
+
+    <ion-button (disable)="formulario.invalid" type="submit" id="boton1" expand="full" fill="outline" shape="round" routerLink="/inicio">
+        Enviar
+    </ion-button>
+  </form>
+   <a routerLink="/docente" id="h1"> ¿Olvidaste tu contraseña? </a>
+</ion-card-content>
+</ion-card>
+
+</ion-content>
